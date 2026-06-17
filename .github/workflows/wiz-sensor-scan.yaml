@@ -1,9 +1,8 @@
 name: "container-image-build"
-# on: [pull_request]
+on: [pull_request]
 
 jobs:
-  container-image-build:
-    name: "Container Image Build"
+  build:
     runs-on: ubuntu-latest
     env:
       REPO: "docker.io/kazuhikotsuji/my-app" # Set the name of the repository to use for the image
@@ -14,6 +13,10 @@ jobs:
         shell: bash
 
     steps:
+      - uses: wiz-sec-public/wiz-sensor-github-action@v0.9
+        with:
+          token: ${{ secrets.WIZ_SENSOR_TOKEN }}
+
       # Checkout the repository to the GitHub Actions runner
       - name: Check out repository
         uses: actions/checkout@v2
