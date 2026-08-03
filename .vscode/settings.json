@@ -3,5 +3,13 @@
     "my-app/.vscode/mcp.json: wiz": {
       "allowedModels": ["copilotcli/auto", "copilot/auto"]
     }
-  }
+  },
+  "wiz.codePolicies.secrets": ["VCS secrets policy"],
+  "wiz.codePolicies.sensitiveData": ["VCS sensitive data policy"],
+  "wiz.codePolicies.vulnerabilities": ["VCS vulnerabilities policy"],
+  "wiz.codePolicies.IAC Configuration": ["VCS IaC policy"],
+  "wiz.codePolicies.sast": ["VCS SAST policy"],
+  "wiz.buildPolicies.secrets": ["VCS secrets policy"],
+  "wiz.buildPolicies.sensitiveData": ["VCS sensitive data policy"],
+  "wiz.buildPolicies.vulnerabilities": ["VCS vulnerabilities policy"]
 }
