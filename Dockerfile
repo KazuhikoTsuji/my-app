@@ -1,5 +1,6 @@
 # Use the official Alpine image as a base
 FROM node:19-alpine
+
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
